@@ -1,0 +1,36 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# VSCode settings
+.vscode/
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# MacOS files
+.DS_Store
+
+# Python dotenv
+.env
+
+# Output files
+output.docx
+
+# IDE-specific files
+.idea/
+
+# JSON data files (اگر نمی‌خوای داخل ریپو باشه، حذف کن این خط رو)
+# data.json
