@@ -39,8 +39,8 @@ def replace_placeholders(doc_or_cell: _Document | _Cell, data: dict) -> None:
                 if drawing:
                     alt_text = drawing[0].get('descr')
                     if alt_text:
-                        key = alt_text.strip("[]#")
-                        if key in data:
+                        key = alt_text.strip("{}")
+                        if key in data: 
                             image_data = base64.b64decode(data[key])
                             _replace_image_run(p, run, image_data)
                             break
