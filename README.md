@@ -15,8 +15,24 @@ It replaces **text placeholders** and **base64-encoded images** (matched via alt
 
 ---
 
-## 📦 Installation
+## 📦 Installation & Usage
 
 ```bash
 pip install json2docx
+```
+
+> **Note:** Before using this tool, make sure your `template.docx` file includes placeholders in the form `{{key}}`.  
+> For example, use placeholders like `{{name}}`, `{{age}}`, and `{{profile_image}}` in your document.  
+> To replace an image, insert a sample image in the DOCX file and set its **alt text** to `{{profile_image}}`.
+
+```python
+from json2docx import render_docx
+
+data = {
+    "name": "Ali",
+    "age": 28,
+    "profile_image": "{{image_base64}}"
+}
+
+render_docx("template.docx", "output.docx", data)
 ```
